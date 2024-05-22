@@ -3,9 +3,9 @@
 
 function Navbar() {
   return (
-    <body>
-            <div className="button-container">
-  <button className="button">
+    <>
+            <div className="navButton-container">
+  <button className="navButton">
     <svg
       className="icon"
       stroke="currentColor"
@@ -21,7 +21,7 @@ function Navbar() {
       ></path>
     </svg>
   </button>
-  <button className="button">
+  <button className="navButton">
     <svg
       className="icon"
       stroke="currentColor"
@@ -40,7 +40,7 @@ function Navbar() {
       ></path>
     </svg>
   </button>
-  <button className="button">
+  <button className="navButton">
     <svg
       className="icon"
       stroke="currentColor"
@@ -57,7 +57,7 @@ function Navbar() {
     </svg>
   </button>
 
-  <button className="button">
+  <button className="navButton">
     <svg
       className="icon"
       stroke="currentColor"
@@ -79,7 +79,7 @@ function Navbar() {
   </button>
 </div>
 
-    </body>
+    </>
   )
 }
 

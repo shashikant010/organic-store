@@ -1,4 +1,4 @@
-.button-container {
+.navButton-container {
     display: flex;
     background-color: rgba(0, 73, 144);
     width: 900px;
@@ -13,11 +13,11 @@
     top: 90vh;
     left: 20vw;
   }
-  .button-container:hover {
+  .navButton-container:hover {
     transition: all 0.5s;
   }
   
-  .button {
+  .navButton {
     outline: 0 !important;
     border: 0 !important;
     width: 40px;
@@ -32,12 +32,22 @@
     cursor: pointer;
   }
   
-  .button:hover {
+  .navButton:hover {
     transform: translateY(-3px);
   }
   
   .icon {
-    font-size: 20px;
+    font-size: 35px;
+  }
+
+  @media screen and (max-width:800px) {
+    .navButton-container {
+        width: 80vw;
+        height: 60px;
+      
+        top: 90vh;
+        left: 10vw;
+      }
   }
 
 
