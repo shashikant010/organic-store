@@ -1,9 +1,20 @@
 "use client"
 
+import CategoriesBar from "@/components/CategoriesBar";
+import Crousal from "@/components/Crousal";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+
+
+
 export default function Home() {
   return (
     <div className="homepage">
-      <h1>HII THERE</h1>
+      <CategoriesBar/>
+      <Hero/>
+      <div className="crousal">
+      {/* <Crousal/> */}
+      </div>
     </div>
   );
 }

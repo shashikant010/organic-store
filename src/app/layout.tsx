@@ -1,4 +1,5 @@
 'use client'
+import Header from "@/components/Header";
 import Navbar from "../components/Navbar";
 import "./globals.css";
 
@@ -10,7 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      </head>
       <body>
+      <Header/>
         {children}
       <Navbar/>
         </body>

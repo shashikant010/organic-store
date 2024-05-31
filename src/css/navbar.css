@@ -1,3 +1,14 @@
+.navbar{
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  top:75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .navButton-container {
     display: flex;
     background-color: rgba(0, 73, 144);
@@ -9,9 +20,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
       rgba(0, 73, 144, 0.5) 5px 10px 15px;
     transition: all 0.5s;
-    position: absolute;
-    top: 90vh;
-    left: 20vw;
+    
   }
   .navButton-container:hover {
     transition: all 0.5s;
@@ -44,10 +53,10 @@
     .navButton-container {
         width: 80vw;
         height: 60px;
-      
-        top: 90vh;
-        left: 10vw;
       }
+    .navbar{
+      top: 80vh;
+    }
   }
 
 
