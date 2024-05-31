@@ -39,7 +39,7 @@ const Categories = () => {
         <div className='flex md:gap-24 ml-8 justify-center items-center gap-3'>
             
            {categories.map(category => {
-            return(<div className='flex flex-col justify-center items-center'>
+            return(<div className='flex flex-col justify-center items-center' key={category.id}>
                 <img src={category.image} className='h-20'/>
                 <p className='md:text-base text-sm'>{category.name}</p>
             </div>)
