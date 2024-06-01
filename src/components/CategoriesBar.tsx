@@ -6,9 +6,12 @@ const CategoriesBar = () => {
     let categoriesTimeOut:any;
   return (
     <>
+    {showCategories && <div className='h-full w-full z-10 bg-gray-600 bg-opacity-40 absolute'></div>}
     <div className='h-12 w-full bg-sky-950 md:flex items-center gap-12 hidden '>
-        <div className='flex justify-center items-center gap-0 ml-10' >
-            <div className='ml-2 text-white text-2xl'><BiSolidCategory /></div><button className='text-white m-2 text-xl' onMouseEnter={()=>setShowCategories(true)} onMouseLeave={()=>{categoriesTimeOut=setTimeout(()=>{setShowCategories(false)},500)}}>Categories &or;</button>
+        <div className='flex justify-center items-center gap-0 ml-10 z-30' >
+            <div className='ml-2 text-white text-2xl '><BiSolidCategory /></div><button className='text-white m-2 text-xl'
+             onClick={()=>{showCategories?setShowCategories(false):setShowCategories(true)}}
+             >Categories &or;</button>
         </div>
         <ul className='md:flex gap-10 hidden'>
             <li>Home</li>
@@ -17,10 +20,13 @@ const CategoriesBar = () => {
             <li>Vendors</li>
         </ul>
     </div>
-    {showCategories && <div onMouseEnter={()=>{ 
-        clearTimeout(categoriesTimeOut)
-        setShowCategories(true)}} onMouseLeave={()=>{categoriesTimeOut=setTimeout(()=>{setShowCategories(false)},500)}} className='ml-10 w-32 p-2 z-10 absolute bg-white'>
-        categories</div>}
+    {showCategories && <div className='ml-10 w-96 text-xl p-2 z-30 absolute bg-white'>
+        <div>Category One </div>
+        <div>Category two</div>
+        <div>Category three </div>
+        <div>Category four</div>
+        <div>Category five</div>
+        </div>}
     </>
   )
 }

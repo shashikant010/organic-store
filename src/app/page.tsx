@@ -12,9 +12,7 @@ export default function Home() {
     <div className="homepage">
       <CategoriesBar/>
       <Hero/>
-      <div className="crousal">
-      {/* <Crousal/> */}
-      </div>
+      
     </div>
   );
 }

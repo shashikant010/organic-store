@@ -1,6 +1,7 @@
 import React from 'react'
 import Crousal from './Crousal'
 import Categories from './Categories'
+import FruitsAndVeg from "./FruitsAndVeg"
 
 const Hero = () => {
   return (
@@ -9,6 +10,7 @@ const Hero = () => {
         <Crousal/>
     </div>
     <Categories/>
+    <FruitsAndVeg/>
     </>
   )
 }

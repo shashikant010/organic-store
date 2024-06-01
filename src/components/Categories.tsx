@@ -1,6 +1,6 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import Image from 'next/image'
 
 interface category extends Document{
     id:number;
@@ -30,18 +30,30 @@ const Categories = () => {
                     name:"organic",
                     image:"https://www.dailynatural.in/storage/app/public/category/2024-01-20-65aac13527f20.webp"
                     },
+                    ,
+                    {   
+                            id:5,
+                        name:"organic",
+                        image:"https://www.dailynatural.in/storage/app/public/category/2024-01-20-65aac13527f20.webp"
+                        },
+                        ,
+                {   
+                        id:6,
+                    name:"organic",
+                    image:"https://www.dailynatural.in/storage/app/public/category/2024-01-20-65aac13527f20.webp"
+                    },
 
 ]
 
   return (
     <div className='m-3 bg-white h-40 '>
         <h1 className='font-bold text-xl m-2'>CATEGORIES</h1>
-        <div className='flex md:gap-24 ml-8 justify-center items-center gap-3'>
+        <div className='flex md:gap-24 ml-2 items-center gap-3 overflow-scroll pb-2'>
             
            {categories.map(category => {
-            return(<div className='flex flex-col justify-center items-center' key={category.id}>
-                <img src={category.image} className='h-20'/>
-                <p className='md:text-base text-sm'>{category.name}</p>
+            return(<div className='flex flex-col justify-center items-center min-w-fit ' key={category?.id}>
+                <Image src={category?.image || ""} alt={category?.name || ""} className='h-20' width={90} height={20}/>
+                <p className='md:text-base text-sm font-semibold'>{category?.name}</p>
             </div>)
            })}
             
