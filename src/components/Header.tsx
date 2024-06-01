@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiHeart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
 const Header = () => {
+  const [showOptions,setShowOptions]=useState(false)
   return (
     <>
     <div className='bg-emerald-200 h-14 w-full flex items-center md:justify-center min-w-max justify-between p-4'>
-      <div className='md:hidden text-3xl'><GiHamburgerMenu /></div>
+      <div className= {`md:hidden text-3xl `}  onClick={()=>setShowOptions((prev)=>!prev)}>{showOptions?<RxCross1 />:<GiHamburgerMenu />}</div>
+      {showOptions && 
+      <div className='absolute z-10 w-full h-full bg-white top-14  bg-opacity-80 left-0 p-4'>
+        <div className='border-black border-2 h-10 w-28 rounded hover:bg-slate-400 font-bold p-1'>
+          Login/signup
+        </div>
+        <ul className='opacity-100 z-50 font-bold mt-2 flex flex-col gap-2'>
+          <li className='text-black'>Home</li>
+          <li className='text-black'>Orders</li>
+          <li className='text-black'>Profile</li>
+          <li className='text-black'>Settings</li>
+          
+        </ul>
+        </div>}
       <h1 className='font-bold m-4 text-2xl'>ORGANICO</h1>
       <div className="md:flex items-center justify-center p-1 hidden">
             <div className="rounded-lg bg-transparent p-5">
