@@ -48,7 +48,7 @@ const Categories = () => {
   return (
     <div className='m-3 bg-white h-40 '>
         <h1 className='font-bold text-xl m-2'>CATEGORIES</h1>
-        <div className='flex md:gap-24 ml-2 items-center gap-3 overflow-scroll pb-2'>
+        <div className='flex md:gap-24 ml-2 items-center gap-3 overflow-scroll pb-2 md:justify-center'>
             
            {categories.map(category => {
             return(<div className='flex flex-col justify-center items-center min-w-fit ' key={category?.id}>

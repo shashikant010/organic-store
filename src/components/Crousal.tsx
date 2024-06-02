@@ -1,8 +1,11 @@
+"use client"
+
 import React, { Component, ReactChild } from 'react';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
+
 
 
 const Crousal = () => {
@@ -14,29 +17,19 @@ const Crousal = () => {
     {image:"https://csform.com/storage/posts/22/content/organic-food-photo-mockup-vegetables-vol2/images/organic-food-photo-mockup-vegetables-vol2-paper-bag-6.webp",name:"four"},]
   return (
     <div className='flex justify-center items-center'>
-    <div className='md:h-fit m-2 overflow-hidden h-50 md:w-5/6'>
+    <div className=' m-2 overflow-hidden h-50 md:w-11/12'>
       
-       <Carousel autoPlay={true} infiniteLoop={true} interval={2000} width={"80vw"} showThumbs={false}>
-
-       
-                <div>
-                    <Image src={crousalImages[0].image} alt={crousalImages[0].name} width={imageWidth} height={imageHeight}/>
-                  
-                </div>
-                <div>
-                <Image src={crousalImages[1].image} alt={crousalImages[1].name} width={imageWidth} height={imageHeight}/>
-                  
-                </div>
-                <div>
+       <Carousel autoPlay={true} infiniteLoop={true} interval={2000} width={window.innerWidth>800?"700px":""}  showThumbs={false}>
+                <Image src={crousalImages[0].image} alt={crousalImages[0].name} fill={true} />
+                <Image src={crousalImages[1].image} alt={crousalImages[1].name} fill={true} />
                 <Image src={crousalImages[2].image} alt={crousalImages[2].name} width={imageWidth} height={imageHeight}/>
-                    
-                </div>
-                
-            </Carousel>
+                </Carousel>
     </div>
     </div>
   )
 }
+
+
 
 export default Crousal
 
